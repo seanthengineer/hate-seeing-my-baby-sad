@@ -1,10 +1,10 @@
 /* --- VINTAGE COLOR PALETTE --- */
 :root {
-    --paper-bg: #e6d2b5;       /* Fallback background color if image fails */
-    --paper-dark: #d4c0a1;     /* Darker beige for texture */
-    --ink-color: #4a3b32;      /* Dark brown text */
-    --accent-red: #8a1c1c;     /* Muted rose red */
-    --polaroid-white: #fdfbf7; /* Off-white for photo frames */
+    --paper-bg: #e6d2b5;
+    --paper-dark: #d4c0a1;
+    --ink-color: #4a3b32;
+    --accent-red: #8a1c1c;
+    --polaroid-white: #fdfbf7;
     --shadow: rgba(74, 59, 50, 0.3);
 }
 
@@ -16,15 +16,37 @@
 }
 
 body {
-    /* Background image placeholder */
-    background: url('./assets/images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
     color: var(--ink-color);
-    font-family: 'Courier Prime', monospace; /* Typewriter style for paragraphs and list */
+    font-family: 'La Belle Aurore', cursive;
     line-height: 1.6;
     overflow-x: hidden;
+    animation: slideInRight 1s ease-out;
+    background-color: var(--paper-bg); /* fallback */
 }
 
+/* --- PAGE-SPECIFIC BACKGROUNDS --- */
+/* Replace the URLs with your chosen background images for each page */
+body.home-bg {
+    background: url('./assets/images/bg-home.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.gallery-bg {
+    background: url('./assets/images/bg-gallery.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.list-bg {
+    background: url('./assets/images/bg-list.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.letter-bg {
+    background: url('./assets/images/bg-letter.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* --- CONTAINER --- */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -34,28 +56,31 @@ body {
 
 /* --- TYPOGRAPHY --- */
 .cursive-title {
-    font-family: 'Cedarville Cursive', cursive; /* Your requested cursive font */
+    font-family: 'Parisienne', cursive;
     font-size: 4rem;
     color: var(--accent-red);
     margin-bottom: 10px;
     text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+    text-transform: none; /* Sentence case */
 }
 
 .cursive-subtitle {
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Parisienne', cursive;
     font-size: 3rem;
     margin-bottom: 20px;
     color: var(--ink-color);
+    text-transform: none; /* Sentence case */
 }
 
 .typewriter-text {
-    font-size: 1.1rem;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
 .signature {
-    font-family: 'Cedarville Cursive', cursive;
-    font-size: 2.5rem;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3rem;
     margin-top: 40px;
 }
 
@@ -63,6 +88,30 @@ body {
     font-size: 2rem;
     color: var(--accent-red);
     margin: 20px 0;
+}
+
+/* --- NAVIGATION BUTTONS --- */
+.nav-container {
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    background: var(--ink-color);
+    color: var(--paper-bg);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 1.2rem;
+    border: none;
+    transition: background 0.3s;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-btn:hover {
+    background: var(--accent-red);
 }
 
 /* --- POLAROID GALLERY --- */
@@ -94,14 +143,15 @@ body {
     sepia: 0.4;
 }
 
+/* Where to place captions: inside <div class="caption"> for each photo */
 .caption {
     margin-top: 15px;
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'La Belle Aurore', cursive;
     font-size: 1.5rem;
     color: var(--ink-color);
 }
 
-/* --- INTERACTIVE ENVELOPE --- */
+/* --- INTERACTIVE ENVELOPE / LETTER --- */
 .envelope {
     border: 2px dashed var(--ink-color);
     padding: 20px;
@@ -125,15 +175,13 @@ body {
 .hidden {
     display: none;
     margin-top: 20px;
-    padding: 20px;
+    padding: 40px;
+    border-radius: 10px;
     border-left: 3px solid var(--accent-red);
-    background: rgba(255,255,255,0.4);
-}
-
-.handwritten {
-    font-family: 'Cedarville Cursive', cursive;
-    font-size: 2rem;
-    color: var(--accent-red);
+    font-family: 'La Belle Aurore', cursive;
+    background: url('./assets/images/coffee-paper.png') no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 /* --- SCROLLING LIST (100 Things) --- */
@@ -146,13 +194,13 @@ body {
 }
 
 .scroll-container {
-    height: 200px;
+    height: 400px;
     overflow: hidden;
     position: relative;
 }
 
 .scroll-content {
-    animation: scrollUp 20s linear infinite;
+    animation: scrollUp 40s linear infinite;
 }
 
 .typewriter-list {
@@ -161,12 +209,8 @@ body {
 
 .typewriter-list li {
     margin-bottom: 15px;
-    font-size: 1.2rem;
-}
-
-@keyframes scrollUp {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(-100%); }
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 1.4rem;
 }
 
 /* --- AUDIO PLAYER --- */
@@ -182,7 +226,8 @@ button {
     color: var(--paper-bg);
     border: none;
     padding: 10px 20px;
-    font-family: 'Courier Prime', monospace;
+    font-family: 'La Belle Aurore', cursive;
+    font-weight: bold;
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
@@ -192,7 +237,7 @@ button:hover {
     background: var(--accent-red);
 }
 
-/* --- FADE IN ANIMATION --- */
+/* --- ANIMATIONS --- */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -204,7 +249,23 @@ button:hover {
     transform: translateY(0);
 }
 
-/* --- OPTIONAL: FLOATING ELEMENTS (VEGGIES, HEARTS) --- */
+@keyframes scrollUp {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* --- OPTIONAL: FLOATING ELEMENTS --- */
 #floating-container {
     position: fixed;
     top: 0;
