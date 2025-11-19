@@ -213,6 +213,16 @@ body.letter-bg {
     font-size: 1.4rem;
 }
 
+.scroll-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the list items horizontally */
+}
+
+.typewriter-list li {
+    text-align: center;  /* Ensures each line is centered */
+}
+
 /* --- AUDIO PLAYER --- */
 .audio-control {
     position: fixed;
