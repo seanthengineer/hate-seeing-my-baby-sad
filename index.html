@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!-- EDIT THIS -->Our Vintage Love Story<!-- END EDIT --></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="audio-control">
+        <button id="play-btn" onclick="toggleMusic()">♪ Play Music</button>
+        <audio id="bg-music" loop>
+            <source src="./assets/audio/song.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <main class="container">
+        
+        <header class="fade-in">
+            <h1 class="cursive-title"><!-- EDIT THIS -->Your Title Here<!-- END EDIT --></h1>
+            <div class="divider">❦</div>
+            <!-- Add your letter text here later -->
+        </header>
+
+        <section class="gallery">
+            <div class="polaroid fade-in">
+                <div class="photo-frame">
+                    <img src="./assets/images/photo1.jpg" alt="Photo 1" onerror="this.src='https://placehold.co/300x300/e6d2b5/4a3b32?text=Add+Image+Here'">
+                </div>
+                <div class="caption">
+                    <!-- Add caption for photo1 here -->
+                </div>
+            </div>
+
+            <div class="polaroid fade-in" style="transform: rotate(2deg);">
+                <div class="photo-frame">
+                    <img src="./assets/images/photo2.jpg" alt="Photo 2" onerror="this.src='https://placehold.co/300x300/e6d2b5/4a3b32?text=Add+Image+Here'">
+                </div>
+                <div class="caption">
+                    <!-- Add caption for photo2 here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-note fade-in">
+            <div class="envelope" onclick="openLetter()">
+                <span class="stamp">❤</span>
+                <!-- Add instruction text here if needed -->
+            </div>
+            <div id="hidden-message" class="hidden">
+                <!-- Add hidden note text here -->
+            </div>
+        </section>
+
+        <section class="scroll-list-section fade-in">
+            <h2 class="cursive-subtitle"><!-- EDIT THIS -->100 Things I Love About You<!-- END EDIT --></h2>
+            <div class="scroll-container">
+                <div class="scroll-content">
+                    <ul class="typewriter-list">
+                        <!-- Add your 100 Things list items here -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="fade-in">
+            <div class="divider">❦</div>
+            <p class="signature"><!-- EDIT THIS -->Your Name<!-- END EDIT --></p>
+        </footer>
+
+    </main>
+
+    <div id="floating-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
