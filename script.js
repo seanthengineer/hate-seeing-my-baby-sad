@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const audio = document.getElementById('bg-music'); // Select the audio element
     const btn = document.getElementById('play-btn');   // Select the play/pause button
 
+    // Force correct audio file
+    if (audio) {
+        audio.src = "./assets/audio/bg-music.mp3";
+    }
+
     // Try to auto-play music if sessionStorage says it was playing
     if (sessionStorage.getItem('musicPlaying') === 'true') {
         audio.volume = 0.8;
@@ -51,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // ================================
 // 3. Reveal Hidden Letter
 // ================================
-function openLetter() {
+function revealLetter() {
     const message = document.getElementById('hidden-message'); // Select hidden note
     // Only reveal if currently hidden
     if (message.classList.contains('hidden')) {
