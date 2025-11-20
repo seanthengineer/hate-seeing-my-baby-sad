@@ -37,12 +37,12 @@ body.gallery-bg {
 }
 
 body.list-bg {
-    background: url('./assets/images/photo7.png') no-repeat center center fixed;
+    background: url('./assets/images/photo11.png') no-repeat center center fixed;
     background-size: cover;
 }
 
 body.letter-bg {
-    background: url('./assets/images/photo11.png') no-repeat center center fixed;
+    background: url('./assets/images/photo7.png') no-repeat center center fixed;
     background-size: cover;
 }
 
