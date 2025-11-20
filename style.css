@@ -317,7 +317,8 @@ button:hover {
 }
 
 body.letter-bg {
-    background-color: #fdf6e3; /* soft paper background */
+    background: url('./assets/images/photo9.png') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
