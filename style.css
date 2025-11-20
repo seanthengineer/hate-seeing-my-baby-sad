@@ -307,3 +307,11 @@ button:hover {
     font-size: 1.4rem;
     margin-top: 10px;
 }
+
+.list-bg {
+    background-image: url('./assets/images/photo7.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
