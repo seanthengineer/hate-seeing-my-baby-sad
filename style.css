@@ -338,5 +338,5 @@ body.letter-bg {
 
 /* --- INDEX.HTML TITLE COLOR OVERRIDE --- */
 body.home-bg .cursive-title {
-    color: #130e0a; /* Replace with your preferred color */
+    color: #130e0a !important; /* Replace with your preferred color */
 }
